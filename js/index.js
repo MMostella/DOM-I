@@ -53,12 +53,13 @@ document.querySelector('nav a:nth-of-type(6)').text = siteContent['nav']['nav-it
 //Images
 
 const ctaImg = document.querySelector('#cta-img');
-ctaImg.src = 'img/header-img.png';
+ctaImg.src = siteContent['cta']['img-src'];
 
 const middleImg = document.querySelector('#middle-img');
-middleImg.src = 'img/mid-page-accent.jpg';
+middleImg.src = siteContent['main-content']['middle-img-src'];
 
 //Inputing text
+
 //cta text
 // const ctaTitle = document.querySelector('.cta-text h1');
 // ctaTitle.textContent = 'DOM' </br> 'Is' </br> 'Awesome';
@@ -119,3 +120,20 @@ contactEmail.textContent = siteContent['contact']['email'];
 
 const footerText = document.querySelector('footer');
 footerText.textContent = siteContent['footer']['copyright'];
+
+// Adding Nav Items
+
+const testLink = document.createElement('a');
+testLink.textContent = 'Test';
+testLink.href = '#';
+
+document.querySelector('nav').appendChild(testLink);
+
+const funLink = document.createElement('a');
+funLink.textContent = 'Fun';
+funLink.href = '#';
+
+document.querySelector('nav').appendChild(funLink);
+
+// Change Color
+document.querySelector('nav a').style.color = 'yellow';
